@@ -14,7 +14,7 @@ public class StoredInfo {
 		if (number >= 0 && number < 2) {
 			prefabs[number] = prefab;
 		} else {
-			System.out.println("number not valid");
+			
 		}
 	}
 	

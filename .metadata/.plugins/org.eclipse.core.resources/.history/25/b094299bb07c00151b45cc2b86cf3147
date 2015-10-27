@@ -25,5 +25,16 @@ public class Prefab {
 		}
 		return content;
 	}
+	
+	public static void main(String[] args) {
+		if (args.length >= 3) {
+			String[] bottles = new String[args.length-1];
+			for(int i=0; i<bottles.length; i++) {
+				bottles[i] = args[i+1];
+			}
+			Prefab prefab = new Prefab(bottles, args[0]);
+			System.out.println(prefab.getContent());
+		}
+	}
 
 }

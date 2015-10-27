@@ -1,0 +1,17 @@
+package StoredInfo;
+
+public class StoredInfo {
+	
+	String[] bottles;
+	Prefab[] prefabs;
+	
+	public StoredInfo() {
+		bottles = new String[4];
+		prefabs = new String[2];
+	}
+	
+	public void newPrefab(int number, Prefab prefab) {
+		
+	}
+
+}

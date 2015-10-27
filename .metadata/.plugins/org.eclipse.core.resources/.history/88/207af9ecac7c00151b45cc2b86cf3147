@@ -1,0 +1,10 @@
+package StoredInfo;
+
+public class StoredInfo {
+	
+	String bottle1;
+	String bottle2;
+	String bottle3;
+	String bottle4;
+
+}

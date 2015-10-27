@@ -1,0 +1,20 @@
+package StoredInfo;
+
+public class Prefab {
+	
+	String content;
+	String name;
+	
+	public Prefab(String[] bottles, String name) {
+		this.name = name;
+		for(int i=0; i<bottles.length; i++) {
+			if (i==0) {
+				content = bottles[i];
+			} else {
+			content = content + " " + bottles[i];
+			}
+		}
+		
+	}
+
+}

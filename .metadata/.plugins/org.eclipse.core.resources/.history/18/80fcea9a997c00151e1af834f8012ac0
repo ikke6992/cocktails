@@ -1,0 +1,13 @@
+package DataHandler;
+
+import java.io.*;
+
+public class InputHandler {
+	
+	Reader reader;
+	
+	public InputHandler(DataInputStream data) {
+		reader = new BufferedReader(new InputStreamReader(data));
+	}
+
+}

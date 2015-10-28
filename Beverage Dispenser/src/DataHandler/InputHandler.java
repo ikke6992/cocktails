@@ -1,27 +1,33 @@
 package DataHandler;
 
 import java.io.*;
+import java.net.*;
 
 public class InputHandler extends Thread {
 	
+	private Socket sock;
+	private InputStream in;
+	
 	public InputHandler() {
-		
+		try {
+		sock = new Socket();
+		in = sock.getInputStream();
+		} catch (IOException e) {
+			
+		}
 	}
 	
-	public void inputHandler(DataInputStream data) {
-		InputStreamReader reader = new InputStreamReader(data);
-		boolean stop = false;
-		int i;
-		try {
-			while (!stop) {
-				i = reader.read();
-				if (i != -1 ) {
+	public void inputHandler() {
+		while(true) {
+			int i;
+			try {
+				i = in.read();
+				if (i != -1) {
 					//do something
 				}
-				sleep(5);
+			} catch (IOException e) {
+				System.out.println("Input cannot be read");
 			}
-		} catch (Exception e /*various exceptions??*/) {
-			
 		}
 	}
 	
@@ -29,5 +35,7 @@ public class InputHandler extends Thread {
 		InputHandler inputHandler = new InputHandler();
 		inputHandler.start();
 	}
+	
 
 }
+

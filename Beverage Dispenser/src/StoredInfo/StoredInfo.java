@@ -25,5 +25,23 @@ public class StoredInfo {
 			System.out.println("number not valid");
 		}
 	}
+	
+	public Prefab getPrefab(int number) {
+		if (number >= 0 && number < 2) {
+			return prefabs[number];
+		} else {
+			System.out.println("number not valid");
+			return null;
+		} 
+	}
+	
+	public String getBottle(int number) {
+		if (number >= 0 && number < 4) {
+			return bottles[number];
+		} else {
+			System.out.println("number not valid");
+			return null;
+		}
+	}
 
 }
